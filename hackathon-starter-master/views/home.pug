@@ -1,27 +1,43 @@
 extends layout
 
 block content
-  h1 Hackathon Starter
-  p.lead A boilerplate for Node.js web applications.
-  hr
-  .row
-    .col-sm-6
-      h2 Heading
-      p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-      p
-        a.btn.btn-default(href='#', role='button') View details »
-    .col-sm-6
-      h2 Heading
-      p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-      p
-        a.btn.btn-default(href='#', role='button') View details »
-    .col-sm-6
-      h2 Heading
-      p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-      p
-        a.btn.btn-default(href='#', role='button') View details »
-    .col-sm-6
-      h2 Heading
-      p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-      p
-        a.btn.btn-default(href='#', role='button') View details »
+  .col-md-3
+    #profile
+      h3.text-center= user.profile.name
+      #avatar.center-block
+        img(src=user.profile.picture)
+      ul#stats.center-block.list-group
+        li.list-group-item Score
+          span.badge 1000
+        li.list-group-item Points
+          span.badge 20
+
+  .col-md-9#homemain
+    .row#filters
+      .row#filter.text-center
+        select(class="selectpicker" title="What is your job preference")
+          option Front end web developer
+          option Back end web developer
+          option Big data and machine learning
+          option Application developer
+          option Software systems developer
+          option Systems security
+
+      .row#filter.text-center
+        select(class="selectpicker" title="What is your proficiency")
+          option Starting undergrad
+          option Finishing undergrad
+          option Masters or Phd
+          option Previous work experience (internship)
+          option Previous work experience (high level)
+
+      .row#filter
+
+
+    .row#entervidmode
+      .col-md-6
+        a(id="landing-signup" class='btn btn-lg center-block' href='/video') Interviewer
+          span.pull-right#point (+1 point)
+      .col-md-6
+        a(id="landing-signup" class='btn btn-lg center-block' href='/video') Interviewee
+          span.pull-right#point (-1 point)
