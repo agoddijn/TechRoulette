@@ -20,15 +20,6 @@ $.getJSON('/token', function (data) {
   videoClient = new Twilio.Video.Client(data.token);
   document.getElementById('room-controls').style.display = 'block';
 
-  // client.connect({to:'my-new-room'}).then(function(room) {
-  //   console.log('Successfully joined a Room: ', room);
-  //   room.on('participantConnected', function(participant) {
-  //     console.log('A remote Participant connected: ', participant);
-  //   })
-  // }, function(error) {
-  //   console.error('Unable to connect to Room: ' +  error.message);
-  // });
-
   // Bind button to join room
   document.getElementById('button-join').onclick = function () {
     roomName = document.getElementById('room-name').value;
