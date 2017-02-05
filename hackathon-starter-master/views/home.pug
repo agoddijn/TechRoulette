@@ -1,7 +1,7 @@
 extends layout
 
 block content
-  .col-md-3
+  .col-md-3#profile2
     #profile
       h3.text-center= user.profile.name
       #avatar.center-block
@@ -15,7 +15,7 @@ block content
   .col-md-9#homemain
     .row#filters
       .row#filter.text-center
-        select(class="selectpicker" title="What is your job preference")
+        select(class="selectpicker" title="What is your job preference?")
           option Front end web developer
           option Back end web developer
           option Big data and machine learning
@@ -24,7 +24,7 @@ block content
           option Systems security
 
       .row#filter.text-center
-        select(class="selectpicker" title="What is your proficiency")
+        select(class="selectpicker" title="What is your proficiency?")
           option Starting undergrad
           option Finishing undergrad
           option Masters or Phd

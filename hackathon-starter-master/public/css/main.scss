@@ -31,7 +31,8 @@ footer {
 }
 
 $primary-color: #3498db;
-$secondary-color: #f1c40f;
+$secondary-color: black;
+$grey: #8E8E8E;
 
 // Input Fields
 // -------------------------
@@ -88,9 +89,12 @@ textarea {
 
 #profile {
   margin: 0;
-  border-right: 2px solid $primary-color;
   padding: 1em 2em 1em 1em;
   height: 100vh;
+}
+
+#profile2 {
+  border-right: 2px solid $primary-color;
 }
 
 #proflile > h3 {
@@ -111,8 +115,12 @@ textarea {
 #avatar > img {
 }
 
-#stats {
-  text-decoration: none;
+#stats > .list-group-item {
+  border-color: $secondary-color !important;
+}
+
+#stats > .list-group-item > .badge {
+  background-color: $secondary-color !important;
 }
 
 #homemain {
@@ -132,6 +140,10 @@ textarea {
   margin-bottom: 1em;
 }
 
+.dropdown-toggle {
+  background-color: transparent !important;
+}
+
 .bootstrap-select > button {
   background-color: transparent;
   border: 2px solid $secondary-color;
@@ -139,7 +151,7 @@ textarea {
 
 .bootstrap-select > button:hover {
   border-color: $secondary-color;
-  background-color: $secondary-color;
+  background-color: $secondary-color !important;
   color: white;
 }
 
@@ -170,4 +182,8 @@ textarea {
 #point {
   margin-top: 3px;
   font-size: 14pt;
+}
+
+.active > a {
+  color: $primary-color !important;
 }
