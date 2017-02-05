@@ -6,9 +6,11 @@ html
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     meta(name='theme-color' content='#4DA5F4')
     meta(name='csrf-token', content=_csrf)
-    title #{title} - Hackathon Starter
+    title #{title} - TechRoulette
     link(rel='shortcut icon', href='/favicon.png')
     link(rel='stylesheet', href='/css/main.css')
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css")
+
 
   body
     include partials/header
@@ -22,6 +24,11 @@ html
     script(src='/js/lib/jquery-3.1.1.min.js')
     script(src='/js/lib/bootstrap.min.js')
     script(src='/js/main.js')
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js")
+
+    script(src="//media.twiliocdn.com/sdk/js/common/v0.1/twilio-common.min.js")
+    script(src="//media.twiliocdn.com/sdk/js/video/releases/1.0.0-beta2/twilio-video.js")
+    script(src="/js/lib/quickstart.js")
 
     // Google Analytics: change UA-XXXXX-X to be your site's ID
     script.

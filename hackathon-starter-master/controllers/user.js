@@ -10,7 +10,7 @@ const User = require('../models/User');
  */
 exports.getLogin = (req, res) => {
   if (req.user) {
-    return res.redirect('/');
+    return res.redirect('/home');
   }
   res.render('account/login', {
     title: 'Login'
@@ -42,7 +42,7 @@ exports.postLogin = (req, res, next) => {
     req.logIn(user, (err) => {
       if (err) { return next(err); }
       req.flash('success', { msg: 'Success! You are logged in.' });
-      res.redirect(req.session.returnTo || '/');
+      res.redirect(req.session.returnTo || '/home');
     });
   })(req, res, next);
 };
@@ -62,7 +62,7 @@ exports.logout = (req, res) => {
  */
 exports.getSignup = (req, res) => {
   if (req.user) {
-    return res.redirect('/');
+    return res.redirect('/home');
   }
   res.render('account/signup', {
     title: 'Create Account'
@@ -103,7 +103,7 @@ exports.postSignup = (req, res, next) => {
         if (err) {
           return next(err);
         }
-        res.redirect('/');
+        res.redirect('/home');
       });
     });
   });
