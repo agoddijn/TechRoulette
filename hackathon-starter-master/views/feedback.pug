@@ -1,27 +1,60 @@
 extends layout
 
 block content
-  h1 Hackathon Starter
-  p.lead A boilerplate for Node.js web applications.
+  h2#feedback-header Partner's Abilities
   hr
   .row
-    .col-sm-6
-      h2 Heading
-      p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-      p
-        a.btn.btn-default(href='#', role='button') View details »
-    .col-sm-6
-      h2 Heading
-      p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-      p
-        a.btn.btn-default(href='#', role='button') View details »
-    .col-sm-6
-      h2 Heading
-      p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-      p
-        a.btn.btn-default(href='#', role='button') View details »
-    .col-sm-6
-      h2 Heading
-      p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-      p
-        a.btn.btn-default(href='#', role='button') View details »
+    .col-lg
+      h3#feedback-question Coding Knowledge
+    .col-lg
+      .rating#feedback-starbar
+        span#feedback-star ☆
+        span#feedback-star ☆
+        span#feedback-star ★
+        span#feedback-star ★
+        span#feedback-star ★
+    .col-lg
+      form(role="form")
+        .form-group#feedback-text
+          textarea.form-control(
+            rows="5"
+            placeholder="How was your partner's code?"
+          )
+    .col-lg
+      h3#feedback-question Communication Skills
+    .col-lg
+      .rating#feedback-starbar
+        span#feedback-star ☆
+        span#feedback-star ★
+        span#feedback-star ★
+        span#feedback-star ★
+        span#feedback-star ★
+    .col-lg
+      form(role="form")
+        .form-group#feedback-text
+          textarea.form-control(
+            rows="5"
+            placeholder="How could your partner inprove their communication?"
+          )
+    .col-lg
+      h3#feedback-question Problem Solving
+    .col-lg
+      .rating#feedback-starbar
+        span#feedback-star ☆
+        span#feedback-star ☆
+        span#feedback-star ☆
+        span#feedback-star ★
+        span#feedback-star ★
+    .col-lg
+      form(role="form")
+        .form-group#feedback-text
+          textarea.form-control(
+            rows="5"
+            placeholder="Any further comments?"
+          )
+    .col-lg
+      div(style='text-align:center')
+        //- input(type='submit')
+        button.btn.btn-default(
+          type="submit"
+        ) Submit Button
