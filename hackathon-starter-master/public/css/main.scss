@@ -30,6 +30,9 @@ footer {
   }
 }
 
+$primary-color: #3498db;
+$secondary-color: #f1c40f;
+
 // Input Fields
 // -------------------------
 
@@ -73,9 +76,98 @@ textarea {
 // --------------------------
 
 #landing-signup {
-  border: 2px solid #2ac5ee;
+  border: 2px solid $secondary-color;
+  color: $secondary-color;
+  font-size: 200%;
 }
 
 #landing-signup:hover {
-  background-color: #2ac5ee;
+  background-color: $secondary-color;
+  color: white;
+}
+
+#profile {
+  margin: 0;
+  border-right: 2px solid $primary-color;
+  padding: 1em 2em 1em 1em;
+  height: 100vh;
+}
+
+#proflile > h3 {
+
+}
+
+#avatar {
+  overflow:hidden;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  border: 3px;
+  display: inline-block;
+  margin-bottom: 1em;
+  margin-left: 3%;
+}
+
+#avatar > img {
+}
+
+#stats {
+  text-decoration: none;
+}
+
+#homemain {
+  margin: 0;
+  padding: 1em 1em 1em 1em;
+}
+
+#filters {
+  border-bottom: 2px solid $primary-color;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+#filter {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+}
+
+.bootstrap-select > button {
+  background-color: transparent;
+  border: 2px solid $secondary-color;
+}
+
+.bootstrap-select > button:hover {
+  border-color: $secondary-color;
+  background-color: $secondary-color;
+  color: white;
+}
+
+.bootstrap-select > button > span {
+  color: $secondary-color;
+}
+
+.bootstrap-select > button:hover > span {
+  color: white;
+}
+
+#filter > .bootstrap-select {
+  width: 80%;
+}
+
+.filter-option {
+  font-size: 200%;
+}
+
+.dropdown-menu {
+  font-size: 120%;
+}
+
+#entervidmode {
+  padding: 1em 1em 1em 1em;
+}
+
+#point {
+  margin-top: 3px;
+  font-size: 14pt;
 }
