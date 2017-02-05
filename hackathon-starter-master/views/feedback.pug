@@ -25,3 +25,23 @@ block content
       p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
       p
         a.btn.btn-default(href='#', role='button') View details »
+
+  block content
+    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal"> Done </button>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel"> Premium Service! </h4>
+          </div>
+          <div class="modal-body">
+            p Use your credits to talk with experienced technical interviewers (ex Google / Apple / Tesla employees)
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">View credit payment options</button>
+          </div>
+        </div>
+      </div>
+    </div>
