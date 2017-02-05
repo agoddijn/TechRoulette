@@ -37,11 +37,18 @@ const apiController = require('./controllers/api');
 const contactController = require('./controllers/contact');
 const videoController = require('./controllers/video');
 const feedbackController = require('./controllers/feedback');
+const interviewController = require('./controllers/interview');
+const tokenController = require('./controllers/token');
 
 /**
  * API keys and Passport configuration.
  */
 const passportConfig = require('./config/passport');
+
+/**
+* Setup Twilio requirements
+*/
+const http = require('http');
 
 /**
  * Create Express server.
@@ -138,6 +145,8 @@ app.post('/account/delete', passportConfig.isAuthenticated, userController.postD
 app.get('/account/unlink/:provider', passportConfig.isAuthenticated, userController.getOauthUnlink);
 app.get('/video', videoController.getVideo);
 app.get('/feedback', feedbackController.getFeedback);
+app.get('/interview', interviewController.getInterview);
+app.get('/token', tokenController.getToken);
 
 /**
  * API examples routes.
@@ -181,7 +190,7 @@ app.get('/auth/instagram/callback', passport.authenticate('instagram', { failure
 });
 app.get('/auth/facebook', passport.authenticate('facebook', { scope: ['email', 'public_profile'] }));
 app.get('/auth/facebook/callback', passport.authenticate('facebook', { failureRedirect: '/login' }), (req, res) => {
-  res.redirect(req.session.returnTo || '/');
+  res.redirect('/home');
 });
 app.get('/auth/github', passport.authenticate('github'));
 app.get('/auth/github/callback', passport.authenticate('github', { failureRedirect: '/login' }), (req, res) => {

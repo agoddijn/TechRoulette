@@ -30,6 +30,10 @@ footer {
   }
 }
 
+$primary-color: #3498db;
+$secondary-color: black;
+$grey: #8E8E8E;
+
 // Input Fields
 // -------------------------
 
@@ -73,11 +77,16 @@ textarea {
 // --------------------------
 
 #landing-signup {
-  border: 2px solid #2ac5ee;
+  border: 2px solid $secondary-color;
+  color: $secondary-color;
+  font-size: 200%;
 }
 
 #landing-signup:hover {
   background-color: #2ac5ee;
+  background-color: $secondary-color;
+  color: white;
+}
 }
 
 #feedback-header {
@@ -124,8 +133,103 @@ textarea {
   margin-right: auto;
 }
 
-// #feedback-star:hover:before,
-// #feedback-star:hover ~ span:before {
-//    content: "\2605";
-//    position: absolute;
-// }
+#profile {
+  margin: 0;
+  padding: 1em 2em 1em 1em;
+  height: 100vh;
+}
+
+#profile2 {
+  border-right: 2px solid $primary-color;
+}
+
+#proflile > h3 {
+
+}
+
+#avatar {
+  overflow:hidden;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  border: 3px;
+  display: inline-block;
+  margin-bottom: 1em;
+  margin-left: 3%;
+}
+
+#avatar > img {
+}
+
+#stats > .list-group-item {
+  border-color: $secondary-color !important;
+}
+
+#stats > .list-group-item > .badge {
+  background-color: $secondary-color !important;
+}
+
+#homemain {
+  margin: 0;
+  padding: 1em 1em 1em 1em;
+}
+
+#filters {
+  border-bottom: 2px solid $primary-color;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+#filter {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+}
+
+.dropdown-toggle {
+  background-color: transparent !important;
+}
+
+.bootstrap-select > button {
+  background-color: transparent;
+  border: 2px solid $secondary-color;
+}
+
+.bootstrap-select > button:hover {
+  border-color: $secondary-color;
+  background-color: $secondary-color !important;
+  color: white;
+}
+
+.bootstrap-select > button > span {
+  color: $secondary-color;
+}
+
+.bootstrap-select > button:hover > span {
+  color: white;
+}
+
+#filter > .bootstrap-select {
+  width: 80%;
+}
+
+.filter-option {
+  font-size: 200%;
+}
+
+.dropdown-menu {
+  font-size: 120%;
+}
+
+#entervidmode {
+  padding: 1em 1em 1em 1em;
+}
+
+#point {
+  margin-top: 3px;
+  font-size: 14pt;
+}
+
+.active > a {
+  color: $primary-color !important;
+}
