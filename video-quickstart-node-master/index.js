@@ -25,7 +25,7 @@ parameter.
 */
 app.get('/token', function(request, response) {
     var identity = randomUsername();
-    
+
     // Create an access token which we will sign and return to the client,
     // containing the grant we just created
     var token = new AccessToken(
@@ -51,7 +51,7 @@ app.get('/token', function(request, response) {
 
 // Create http server and run it
 var server = http.createServer(app);
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 5000;
 server.listen(port, function() {
     console.log('Express server running on *:' + port);
 });
