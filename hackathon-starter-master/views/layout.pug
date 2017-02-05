@@ -8,18 +8,24 @@ html
     meta(name='csrf-token', content=_csrf)
     title #{title} - TechRoulette
     link(rel='shortcut icon', href='/favicon.png')
+    link(rel="stylesheet", href="css/creative.css" )
     link(rel='stylesheet', href='/css/main.css')
+    //link(rel='stylesheet', href='/css/custom.css')
     link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css")
+    link(rel="stylesheet" href="/css/lib/codemirror.css")
+    link(rel="stylesheet" href="/css/lib/monokai.css")
 
 
-  body
+  body.main
     include partials/header
+
+    block landing
 
     .container
       include partials/flash
       block content
 
-    include partials/footer
+    //include partials/footer
 
     script(src='/js/lib/jquery-3.1.1.min.js')
     script(src='/js/lib/bootstrap.min.js')
@@ -29,6 +35,8 @@ html
     script(src="//media.twiliocdn.com/sdk/js/common/v0.1/twilio-common.min.js")
     script(src="//media.twiliocdn.com/sdk/js/video/releases/1.0.0-beta2/twilio-video.js")
     script(src="/js/lib/quickstart.js")
+    script(src="/js/lib/codemirror.js")
+    script(src="/js/lib/javascript.js")
 
     // Google Analytics: change UA-XXXXX-X to be your site's ID
     script.
@@ -38,3 +46,9 @@ html
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
       ga('create', 'UA-XXXXX-X', 'auto');
       ga('send', 'pageview');
+
+    // For codemirror
+    script.
+      var myCodeMirror = CodeMirror(document.getElementById("codemirror"), {
+        theme: "monokai"
+      });

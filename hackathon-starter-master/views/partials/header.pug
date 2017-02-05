@@ -7,15 +7,12 @@
         span.icon-bar
         span.icon-bar
       a.navbar-brand(href='/')
-        i.fa.fa-cube
-        | TechRoulette
+        img(src="img/peerprep.png",height="42")
     .collapse.navbar-collapse
       ul.nav.navbar-nav
         if user
           li(class=(title == 'Home') ? 'active' : undefined)
             a(href='/home') Home
-          li(class=(title == 'Feedback') ? 'active' : undefined)
-            a(href='/feedback') Feedback
       ul.nav.navbar-nav.navbar-right
         if !user
           li(class=(title == 'Login') ? 'active' : undefined)
