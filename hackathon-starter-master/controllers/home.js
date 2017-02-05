@@ -1,5 +1,5 @@
 /**
- * GET /
+ * GET /home
  * Home page.
  */
 exports.index = (req, res) => {
