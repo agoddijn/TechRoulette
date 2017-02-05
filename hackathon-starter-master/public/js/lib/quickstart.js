@@ -31,7 +31,8 @@ $.getJSON('/token', function (data) {
 
   // Bind button to join room
   document.getElementById('button-join').onclick = function () {
-    roomName = document.getElementById('room-name').value;
+    // roomName = document.getElementById('room-name').value;
+    roomName = "demo"
     if (roomName) {
       log("Joining room '" + roomName + "'...");
 
