@@ -34,11 +34,11 @@ $.getJSON('/token', function (data) {
     // roomName = document.getElementById('room-name').value;
     roomName = "demo"
     if (roomName) {
-      log("Joining room '" + roomName + "'...");
+      // log("Joining room '" + roomName + "'...");
 
       videoClient.connect({ to: roomName}).then(roomJoined,
         function(error) {
-          log('Could not connect to Twilio: ' + error.message);
+          // log('Could not connect to Twilio: ' + error.message);
         });
     } else {
       alert('Please enter a room name.');
@@ -46,19 +46,19 @@ $.getJSON('/token', function (data) {
   };
 
   // Bind button to leave room
-  document.getElementById('button-leave').onclick = function () {
-    log('Leaving room...');
-    activeRoom.disconnect();
-  };
+  // document.getElementById('button-leave').onclick = function () {
+  //   // log('Leaving room...');
+  //   activeRoom.disconnect();
+  // };
 });
 
 // Successfully connected!
 function roomJoined(room) {
   activeRoom = room;
 
-  log("Joined as '" + identity + "'");
+  // log("Joined as '" + identity + "'");
   document.getElementById('button-join').style.display = 'none';
-  document.getElementById('button-leave').style.display = 'inline';
+  //document.getElementById('button-leave').style.display = 'inline';
 
   // Draw local video, if not already previewing
   if (!previewMedia) {
@@ -66,26 +66,26 @@ function roomJoined(room) {
   }
 
   room.participants.forEach(function(participant) {
-    log("Already in Room: '" + participant.identity + "'");
+    // log("Already in Room: '" + participant.identity + "'");
     participant.media.attach('#remote-media');
   });
 
   // When a participant joins, draw their video on screen
   room.on('participantConnected', function (participant) {
-    log("Joining: '" + participant.identity + "'");
+    // log("Joining: '" + participant.identity + "'");
     participant.media.attach('#remote-media');
   });
 
   // When a participant disconnects, note in log
   room.on('participantDisconnected', function (participant) {
-    log("Participant '" + participant.identity + "' left the room");
+    // log("Participant '" + participant.identity + "' left the room");
     participant.media.detach();
   });
 
   // When we are disconnected, stop capturing local video
   // Also remove media for all remote participants
   room.on('disconnected', function () {
-    log('Left');
+    // log('Left');
     room.localParticipant.media.detach();
     room.participants.forEach(function(participant) {
       participant.media.detach();
@@ -107,17 +107,17 @@ document.getElementById('button-preview').onclick = function () {
     },
     function (error) {
       console.error('Unable to access local media', error);
-      log('Unable to access Camera and Microphone');
+      // log('Unable to access Camera and Microphone');
     });
   }
 };
 
 // Activity log
-function log(message) {
-  var logDiv = document.getElementById('log');
-  logDiv.innerHTML += '<p>&gt;&nbsp;' + message + '</p>';
-  logDiv.scrollTop = logDiv.scrollHeight;
-}
+// function log(message) {
+//   var logDiv = document.getElementById('log');
+//   logDiv.innerHTML += '<p>&gt;&nbsp;' + message + '</p>';
+//   logDiv.scrollTop = logDiv.scrollHeight;
+// }
 
 function leaveRoomIfJoined() {
   if (activeRoom) {
