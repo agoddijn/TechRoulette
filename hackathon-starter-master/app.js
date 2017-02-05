@@ -36,6 +36,7 @@ const userController = require('./controllers/user');
 const apiController = require('./controllers/api');
 const contactController = require('./controllers/contact');
 const videoController = require('./controllers/video');
+const feedbackController = require('./controllers/feedback');
 const interviewController = require('./controllers/interview');
 const tokenController = require('./controllers/token');
 
@@ -143,6 +144,7 @@ app.post('/account/password', passportConfig.isAuthenticated, userController.pos
 app.post('/account/delete', passportConfig.isAuthenticated, userController.postDeleteAccount);
 app.get('/account/unlink/:provider', passportConfig.isAuthenticated, userController.getOauthUnlink);
 app.get('/video', videoController.getVideo);
+app.get('/feedback', feedbackController.getFeedback);
 app.get('/interview', interviewController.getInterview);
 app.get('/token', tokenController.getToken);
 
