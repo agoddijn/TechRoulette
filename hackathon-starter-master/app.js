@@ -35,6 +35,7 @@ const userController = require('./controllers/user');
 const apiController = require('./controllers/api');
 const contactController = require('./controllers/contact');
 const videoController = require('./controllers/video');
+const feedbackController = require('./controllers/feedback');
 
 /**
  * API keys and Passport configuration.
@@ -134,6 +135,7 @@ app.post('/account/password', passportConfig.isAuthenticated, userController.pos
 app.post('/account/delete', passportConfig.isAuthenticated, userController.postDeleteAccount);
 app.get('/account/unlink/:provider', passportConfig.isAuthenticated, userController.getOauthUnlink);
 app.get('/video', videoController.getVideo);
+app.get('/feedback', feedbackController.getFeedback);
 
 /**
  * API examples routes.
