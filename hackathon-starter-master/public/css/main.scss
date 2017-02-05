@@ -127,11 +127,12 @@ textarea {
 #homemain {
   margin: 0;
   padding: 1em 1em 1em 1em;
+  height: 100vh;
   overflow-y: scroll;
+  text-align: center;
 }
 
 #filters {
-  border-bottom: 2px solid $primary-color;
   padding-left: 1em;
   padding-right: 1em;
 }

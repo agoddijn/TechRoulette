@@ -9,10 +9,11 @@ block content
       ul#stats.center-block.list-group
         li.list-group-item Score
           span.badge 1000
-        li.list-group-item Points
+        li.list-group-item Credits
           span.badge 20
 
   .col-md-9#homemain
+    h2 Filters
     .row#filters
       .row#filter.text-center
         select(class="selectpicker" title="What is your job preference?")
@@ -31,13 +32,21 @@ block content
           option Previous work experience (internship)
           option Previous work experience (high level)
 
-      .row#filter
-
+      .row#filter.text-center
+        select(class="selectpicker" multiple title="What languages are you familliar with?")
+          option Java
+          option Javascript
+          option C
+          option C++
+          option C#
+          option Python
+          option Matlab
 
     .row#entervidmode
+      h2 Choose role
       .col-md-6
         a(id="landing-signup" class='btn btn-lg center-block' href='/interview') Interviewer
-          span.pull-right#point (+1 point)
+          span.pull-right#point (+1 credit)
       .col-md-6
         a(id="landing-signup" class='btn btn-lg center-block' href='/interview') Interviewee
-          span.pull-right#point (-1 point)
+          span.pull-right#point (-1 credit)
