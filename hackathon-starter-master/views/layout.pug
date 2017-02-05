@@ -50,5 +50,8 @@ html
     // For codemirror
     script.
       var myCodeMirror = CodeMirror(document.getElementById("codemirror"), {
+        value: "removeDataset(id: string): Promise<InsightResponse> {\n\treturn new Promise(function(fulfill, reject) {\n\t\tFileSystem.remove(id).then(function(success: boolean) {\n\t\t\tif (success) {\n\t\t\t\tLog.info('Data successfully removed');\n\t\t\t\tfulfill({code: 204, body: {}});\n\t\t\t} else {\n\t\t\t\tLog.error('Data could not be removed');\n\t\t\t\treject({code: 404, body: {}});\n\t\t\t}\n\t\t}).catch(function(err: any) {\n\t\t\tLog.error('Error in removeDataset');\n\t\t\tLog.error(err);\n\t\t\treject({code: 404, body: {error: err.message}});\n\t\t});\n\t});\n};",
+        lineNumbers: true,
+        mode: "javascript",
         theme: "monokai"
       });

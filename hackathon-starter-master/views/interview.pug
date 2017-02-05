@@ -7,25 +7,17 @@ block content
 
   .row
     .col-md-6
-      .row
-        block content
+      block content
+        .row#vidrow
           <div id="remote-media"></div>
-          <div id="controls">
-            .col-md-4
-              .row
-                <div id="room-controls">
-                  <p class="instructions">Join Interview!:</p>
-                  //- <input id="room-name" type="text" placeholder="" />
-                  <button id="button-join">Join Room</button>
-                </div>
-              .row
-                <div id="preview">
-                  <div id="local-media"></div>
-                  <button id="button-preview">Preview My Camera</button>
-                </div>
-              //- .row
-              //-   <div id="log"></div>
-          </div>
+          <div id="local-media"></div>
+        <div id="controls">
+          .col-md-4
+            .row
+              <div id="room-controls">
+                <button id="button-join">Join Room</button>
+              </div>
+        </div>
 
     .col-md-6
       .row
@@ -34,8 +26,12 @@ block content
   .row#prompts
     .col-md-6
       h2 Example questions
+      ul
+        li You are given two non-empty linked lists representing two non-negative integers. The most significant digit comes first and each of their nodes contain a single digit. Add the two numbers and return it as a linked list. You may assume the two numbers do not contain any leading zero, except the number 0 itself.
     .col-md-6
       h2 Answers
+      ul
+        li Code example
 
   .row
     a(id="landing-signup" class='btn btn-sm center-block' href='/feedback') Finish interview

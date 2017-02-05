@@ -83,54 +83,8 @@ textarea {
 }
 
 #landing-signup:hover {
-  background-color: #2ac5ee;
   background-color: $secondary-color;
   color: white;
-}
-}
-
-#feedback-header {
-  text-align: center;
-  padding-bottom: 8px;
-}
-
-#feedback-question {
-  text-align: center;
-  padding-bottom: 16px;
-  padding-top: 8px;
-}
-
-#feedback-text {
-  text-align: center;
-}
-
-#feedback-slider {
-  align: center;
-  max-width: 50%;
-}
-
-#feedback-starbar {
-  unicode-bidi: bidi-override;
-  direction: rtl;
-  text-align: center;
-  padding-bottom: 16px;
-}
-
-#feedback-star {
-  display: inline-block;
-  position: relative;
-  width: 3em;
-  font-size: 30px;
-}
-
-#feedback-text {
-  padding-top: 1em;
-  padding-bottom: .5em;
-  align: center;
-  max-width: 30em;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 #profile {
@@ -255,21 +209,34 @@ textarea {
 }
 
 // Twilio css
-div#remote-media {
-  height: 43%;
-  width: 100%;
-  background-color: #fff;
-  text-align: center;
-  margin: auto;
+#vidrow {
+  display: inline;
+  float: left;
 }
 
-  div#remote-media video {
-    border: 1px solid #272726;
-    margin: 3em 2em;
-    max-width: 50% !important;
-    background-color: #272726;
-    background-repeat: no-repeat;
-  }
+div#remote-media{
+  height: 43%;
+  background-color: #fff;
+  text-align: center;
+  max-width: 80%;
+}
+
+div#remote-media video, #local-media video {
+  border: 1px solid #272726;
+  max-width: 100% !important;
+  background-color: #272726;
+  background-repeat: no-repeat;
+}
+
+// #local-media, #remote-media {
+// }
+
+#local-media {
+  max-width: 25%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
 
 div#controls {
   // padding: 3em;
