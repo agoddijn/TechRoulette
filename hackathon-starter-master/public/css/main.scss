@@ -91,6 +91,7 @@ textarea {
   margin: 0;
   padding: 1em 2em 1em 1em;
   height: 100vh;
+  overflow-y: none;
 }
 
 #profile2 {
@@ -126,6 +127,7 @@ textarea {
 #homemain {
   margin: 0;
   padding: 1em 1em 1em 1em;
+  overflow-y: scroll;
 }
 
 #filters {
@@ -199,4 +201,8 @@ textarea {
 
 .navbar-brand {
   padding: 6px 15px;
+}
+
+#codemirror {
+  border: 2px solid black;
 }
