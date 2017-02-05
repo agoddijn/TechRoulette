@@ -52,15 +52,12 @@ block content
             rows="5"
             placeholder="Any further comments?"
           )
-    .col-lg
-      div(style='text-align:center')
-        //- input(type='submit')
-        button.btn.btn-default(
-          type="submit"
-        ) Submit Button
+
 
   block content
-    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal"> Done </button>
+    .col-lg
+      <button type="button" class="btn btn-primary btn-lg center-block" data-toggle="modal" data-target="#myModal"> Submit </button>
+
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
